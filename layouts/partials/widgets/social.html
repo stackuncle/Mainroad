@@ -1,0 +1,21 @@
+<div class="widget__content">
+	<div class="widget-rss widget">
+		{{ if .RSSLink }}
+		<a class="widget__social" href="{{ .RSSLink }}">
+			<img src="/img/rss-mark.png">
+		</a>
+		{{ end }}
+
+		{{ with .Site.Social.twitter }}
+		<a class="widget__social" href="https://twitter.com/{{ . }}" target="_blank">
+			<img src="/img/twitter-mark.png">
+		</a>
+		{{ end }}
+
+		{{ with .Site.Social.github }}
+		<a class="widget__social" href="https://github.com/{{ . }}" target="_blank">
+			<img src="/img/github-mark.png">
+		</a>
+		{{ end }}
+	</div>
+</div>
