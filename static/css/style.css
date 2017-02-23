@@ -20,8 +20,9 @@ code {
 	color:#0d0c03;
 	font-size:14px;
 	font-weight:normal;
-	margin: 0;
-	padding: 0;
+	margin: 1px 1px 1px 1px;
+	padding: 1px 5px 1px 3px;
+	border-radius: 3px;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
