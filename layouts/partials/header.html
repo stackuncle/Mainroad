@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-us" }}">
 <head>
+	{{- if .Site.Params.widgets.adsense}}
+	<div>
+		{{ partial "widgets/adsense.html" . }}
+	</div>
+	{{- end }}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ .Title }}</title>

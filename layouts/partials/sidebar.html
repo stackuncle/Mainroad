@@ -4,5 +4,9 @@
 	{{ partial "widgets/recent.html" . }}
 	{{ partial "widgets/categories.html" . }}
 	{{ partial "widgets/taglist.html" . }}
+	{{- if .Site.Params.widgets.adsense}}
+	<div>
 	{{ partial "widgets/adsense.html" . }}
+	</div>
+	{{- end }}
 </aside>
