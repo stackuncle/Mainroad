@@ -1,6 +1,10 @@
 {{ partial "header.html" . }}
 
+<script src="/js/demo.js"></script>
+
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<button id="demo" class="button" onclick="setButtonText()">meButton</button>
+	<button class="button" onclick="showAlert()">alertButton</button>
 	<article class="post">
 		<header class="post__header clearfix">
 			<h1 class="post__title">{{ .Title }}</h1>
