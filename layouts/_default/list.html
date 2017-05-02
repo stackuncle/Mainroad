@@ -7,7 +7,7 @@
 		</header>
 		{{- end }}
 
-		{{- $paginator := .Paginate ( where .Data.Pages "Section" "post") }}
+		{{- $paginator := .Paginate ( where .Data.Pages "Section" "!=" "about") }}
 		{{- range $paginator.Pages }}
 		<article class="loop__item post clearfix">
 			{{- if .Params.thumbnail }}
