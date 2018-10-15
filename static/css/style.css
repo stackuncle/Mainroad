@@ -16,19 +16,20 @@ time, mark, audio, video {
 
 code {
 	font-family: "Consolas", Courier New, Courier, monospace;
-	background-color:#282b2e;
-	color:#a9b7c6;
+	background-color:#f7f7f9;
+	color:#d14;
 	font-size:14px;
 	font-weight:normal;
 	margin: 1px 1px 1px 1px;
 	padding: 3px 3px 2px 3px;
 	border-radius: 3px;
+	border: 1px solid #e1e1e8;
 }
 
 pre {
 	font-family: "Consolas", Courier New, Courier, monospace;
-	color: #a9b7c6;
-	background: #282b2e;
+	color: #d14;
+	background: #f7f7f9;
 	margin-bottom: 10px;
 	margin-bottom: 1.25rem;
 	border: 1px solid #ebebeb;
