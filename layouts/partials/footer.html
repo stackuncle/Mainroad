@@ -11,6 +11,10 @@
 		navClass: "menu--collapse",
 	});
 </script>
-{{ template "_internal/google_analytics.html" . }}
+{{ $baseurl := printf "%s" .Site.BaseURL }}
+{{ if in $baseurl "localhost" }}
+{{ else }}
+    {{ template "_internal/google_analytics.html" . }}
+{{ end }}
 </body>
 </html>
