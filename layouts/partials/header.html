@@ -9,6 +9,7 @@
 		{{ partial "menu.html" . }}
 	</div>
 </header>
+
 {{ if isset .Site.Params "busuanzi" }}
 <!-- 不蒜子 -->
 <script async src="//cdn.busuanzi.ibruce.info/cdn/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -26,4 +27,11 @@
         }
     });
 </script>
+{{ end }}
+
+<!-- highlight code -->
+{{ with .Site.Params.highlightjs }}
+<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.15.9/styles/{{ . }}.min.css">
+<script src="//cdn.bootcss.com/highlight.js/9.15.9/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 {{ end }}
