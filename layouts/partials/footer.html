@@ -1,4 +1,20 @@
 <footer class="footer">
+	{{ if isset .Site.Params "busuanzi" }}
+	<script async src="//cdn.busuanzi.ibruce.info/cdn/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<script>
+		$(document).ready(function() {
+			var int = setInterval(fixCount, 100);
+			var busuanziSiteOffset = {{ .Site.Params.busuanzi_site_offset }}
+			function fixCount() {
+				if ($("#busuanzi_container_site_pv").css("display") != "none") {
+					clearInterval(int);
+					$("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+				}
+			}
+		});
+	</script>
+	{{ end }}
+
 	<div class="container footer__container flex">
 		{{ partial "footer_links.html" . }}
 		<div class="footer__copyright">
