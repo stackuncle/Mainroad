@@ -1,28 +1,9 @@
 <footer class="footer">
-	{{ if isset .Site.Params "busuanzi" }}
-	<script async src="//cdn.busuanzi.ibruce.info/cdn/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-	<script>
-		$(document).ready(function() {
-			var int = setInterval(fixCount, 100);
-			var busuanziSiteOffset = {{ .Site.Params.busuanzi_site_offset }}
-			function fixCount() {
-				if ($("#busuanzi_container_site_pv").css("display") != "none") {
-					clearInterval(int);
-					$("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
-				}
-			}
-		});
-	</script>
-	{{ end }}
-
 	<div class="container footer__container flex">
 		{{ partial "footer_links.html" . }}
 		<div class="footer__copyright">
 			&copy; {{ now.Format "2006" }} {{ .Site.Params.copyright | default .Site.Title }}.
 			<span class="footer__copyright-credits">{{ T "footer_credits" | safeHTML }}</span>
-			<span id="busuanzi_container_site_pv">本站访问量：<span id="busuanzi_value_site_pv"></span>次</span>
-			&nbsp;
-			<span id="busuanzi_container_site_uv">您是本站第 <span id="busuanzi_value_site_uv"></span> 位访问者
         </span>
 		</div>
 	</div>
